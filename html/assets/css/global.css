@@ -1,0 +1,153 @@
+body{
+	background:#FFF;
+	font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+h1{ font-weight:700; font-family:"Text Me One","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;}
+h2{ font-weight:600; font-family:"Text Me One","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif; color:#3399CC;}
+h3{ font-weight:500; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;}
+h4{ font-weight:400; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif; margin:10px 0 5px 0; font-size:100%;}
+p{font-weight:300; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;}
+a{font-weight:500; font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;}
+
+.nav-bar {margin:0;}
+
+.logo{margin:5px 0 0 10px; font-size:28px; color:#fff;  font-family:"Marcellus SC",cursive,Helvetica,Arial,sans-serif;}
+
+/*.panel{
+	background:none;
+	border:none;
+	}*/
+
+.tpl_top_nav{overflow:hidden; background:#444; border-bottom:2px solid #3399CC;}
+.tpl_top_nav_inner{max-width:1024px; margin:0 auto;}
+
+.tpl_header{background:#A2C100; }
+.tpl_body{
+	background:url('http://luzquinos.net/images/layout/content_bg3.jpg') repeat-x;
+	overflow:hidden;
+	padding:0 0 40px 0;
+}
+
+.tpl_project_top{
+	border:none;
+	background:none;
+}
+.tpl_project{
+	padding:0;
+}
+
+.tpl_project_box{
+	background:#FDFDFD;
+	border: solid 1px #EEE;
+}
+
+#content{
+	max-width:1024px;
+	}
+	
+.tpl_footer{
+	background:#444; 
+	border-top:2px solid #3399CC;
+	}
+
+@media only screen and (max-width: 767px) {
+	.logo{margin-bottom:5px;}
+}
+
+/*END The Template*/
+
+/*START menu_main*/
+.menu_main {
+    border: none;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 80%;
+    font-weight: bold;
+    position:relative;
+}
+.menu_main ul {
+    background: #87B8FF;
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu_main li {
+    float: left;
+    padding: 0px;
+}
+.menu_main li a {
+    background: url("images/seperator.gif") bottom right no-repeat;
+    color: #FFF;
+    display: block;
+    font-weight: normal;
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px 17px; /*change padding to fit*/
+    text-align: center;
+    text-decoration: none;
+}
+.menu_main li a:hover, .menu_main ul li:hover a {
+    background: #2C5DA6 url("images/hover.gif") bottom center no-repeat;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.menu_main li ul {
+    background: #87B8FF;
+    display: none;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    width: 100px;
+    z-index: 200;
+}
+.menu_main li:hover ul {
+    display: block;
+}
+.menu_main li li {
+    background: url('images/sub_sep.gif') bottom left no-repeat;
+    display: block;
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+}
+.menu_main li:hover li a {
+    background: none;
+}
+.menu_main li ul a {
+    display: block;
+    height: 35px;
+    font-size: 12px;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px 10px 0px 15px;
+    text-align: left;
+}
+.menu_main li ul a:hover, .menu_main li ul li:hover a {
+    background: #2C5DA6 url('images/hover_sub.gif') center left no-repeat;
+    border: 0px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.menu_main p {
+    clear: left;
+}
+/*END class menu_main*/
+
+.back_top{
+	position: fixed;
+	z-index: 20;	
+	bottom: 3px;
+	right:0;
+}
+
+.left{ float:left !important;}
+
+
+
+
