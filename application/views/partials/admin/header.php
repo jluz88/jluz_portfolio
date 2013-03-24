@@ -48,6 +48,9 @@
 		    <p class="title"><a href="<?=base_url().'admin/cats'?>">Categories</a></p>
 		  </section>
 		  <section class="section ">
+		  	<p class="title"><a href="<?=base_url().'admin/projects'?>">Projects</a></p>
+		  </section>
+		  <section class="section ">
 		    <p class="title"><a href="#">Galleries</a></p>
 		    <div class="content">
 		      <ul class="side-nav">
@@ -55,9 +58,6 @@
 		        <li><a href="#">Add</a></li>
 		      </ul>
 		    </div>
-		  </section>
-		  <section class="section ">
-		  	<p class="title"><a href="#">Projects</a></p>
 		  </section>
 		  <section class="section ">
 		    <p class="title"><a href="#">Users</a></p>

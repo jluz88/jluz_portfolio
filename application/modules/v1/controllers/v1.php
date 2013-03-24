@@ -69,4 +69,49 @@ class v1 extends REST_Controller{
 		$this->response($return);
 	}
 	
+	public function projects_get($id = null)
+	{
+		if($id != null && is_numeric($id))
+		{
+			$this->db->where('id', $id);
+		}
+		$data = $this->db->get('projects')->result();
+		
+		$this->response($data);
+	}
+	
+	public function projects_post()
+	{
+		$data = $this->post();
+		
+		$this->db->insert('projects', $data);
+		
+		$cat_id = $this->db->insert_id();
+		
+		$this->response(array('id' => $cat_id));
+	}
+	
+	public function projects_put($id)
+	{
+		$data = $this->_put_args;
+		
+		$this->db->where('id', $id);
+		$this->db->update('projects', $data);
+		
+		$this->response($data);
+	}
+
+	public function projects_delete($id)
+	{
+		$this->db->delete('projects', array('id' => $id));
+		
+		if($this->db->affected_rows()){
+			$return = TRUE;
+		}else{
+			$return = FALSE;
+		}
+		
+		$this->response($return);
+	}
+	
 }

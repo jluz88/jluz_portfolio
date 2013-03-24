@@ -21,10 +21,10 @@ class admin extends CI_controller {
 		$this->template->build('cats_view');
 	}
 	
-	// public function categories()
-	// {
-		// $this->template->build('categories');	
-	// }
+	public function projects()
+	{
+		$this->template->build('projects_view');	
+	}
 	
 	public function upload()
 	{

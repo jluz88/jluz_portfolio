@@ -11,20 +11,20 @@ $(function(){
 	 * Categories
 	 */
 
-	var CatsModel = Backbone.Model.extend({});
+	var ProjectsModel = Backbone.Model.extend({});
 	
-	var CatsColl = Backbone.Collection.extend({
-		model:CatsModel,
-		url:'/v1/cats'
+	var ProjectsColl = Backbone.Collection.extend({
+		model:ProjectsModel,
+		url:'/v1/projects'
 	});
 
-	var catsColl = new CatsColl;
+	var projectsColl = new ProjectsColl;
 
-	var CatsItemView = Backbone.View.extend({
+	var ProjectsItemView = Backbone.View.extend({
 
 		tagName:'tr',
 
-		template: _.template($('#tpl_cats_item').html()),
+		template: _.template($('#tpl_projects_item').html()),
 		
 		events:{
 			'dblclick .view' : 'edit',
@@ -78,22 +78,22 @@ $(function(){
 
 	});
 	
-	var CatsAppView = Backbone.View.extend({
+	var ProjectsAppView = Backbone.View.extend({
 		
 		el:'#container',
 	
 		initialize: function(){
-			this.listenTo(catsColl, 'add', this.addOne);
-			this.listenTo(catsColl, 'reset', this.addAll);
-			this.listenTo(catsColl, 'all', this.render);
+			this.listenTo(projectsColl, 'add', this.addOne);
+			this.listenTo(projectsColl, 'reset', this.addAll);
+			this.listenTo(projectsColl, 'all', this.render);
 			
-			catsColl.fetch();
+			projectsColl.fetch();
 			
 		},
 		
 		events: {
-			'click #cat_add'     : 'create',
-			'keypress #cat_name' : 'addOnEnter'	
+			'click #project_add'     : 'create',
+			'keypress #project_name' : 'addOnEnter'	
 		},
 	
 		render: function(){
@@ -102,14 +102,14 @@ $(function(){
 
 		addOne: function(catModel){
 			
-			var catsItemView = new CatsItemView({model:catModel});
+			var projectsItemView = new ProjectsItemView({model:catModel});
 			
-			this.$('#cat_list').append( catsItemView.render().el );
+			this.$('#project_list').append( projectsItemView.render().el );
 			
 		},
 
 		addAll: function(){
-			catsColl.each(this.addOne, this);
+			projectsColl.each(this.addOne, this);
 		},
 		
 		addOnEnter: function(e){
@@ -118,13 +118,13 @@ $(function(){
 		
 		create: function(){
 			
-			catsColl.create({title: $('#cat_name').val()});
+			projectsColl.create({title: $('#project_name').val()});
 			
-			$('#cat_name').val('');
+			$('#project_name').val('');
 		}
 		
 	});
 
-	var catsAppView = new CatsAppView;
+	var projectsAppView = new ProjectsAppView;
 	
 });
