@@ -2,11 +2,11 @@ $(function(){
 
 	var pr = function(someVar){
 		console.log(someVar);
-	}
+	};
 	var pre = function(someVar){
 		console.log(someVar);
 		return false;
-	}
+	};
 		
 		// var makeSortable = function(){
 			// $( "#sortable" ).sortable({
