@@ -122,7 +122,7 @@ $(function(){
 			$('#project_name').val('');
 		}
 
-	}); 
+	});
 
 	var projectsAppView = new ProjectsAppView();
 
