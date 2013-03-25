@@ -1,13 +1,17 @@
 	<style type="text/css">
-		/*#cat_list li{
-			list-style: none;
-		}*/
+
 		#cat_list .edit{
 			display: none;
 		}
 		.delete{
+			display: none;
 			cursor: pointer;
 		}
+
+		tr:hover .delete{
+			display: block;
+		}
+
 	</style>
 	
 	
@@ -40,7 +44,7 @@
 	      	<label class="view"><%- title%></label>
 	    	<input class="edit" type="text" value="" />
     	</td>
-	    <td><a href="#" class="delete">Delete</a></td>
+	    <td><a class="delete">Delete</a></td>
 	</script>
 
 	<script type="text/template" id="tpl_cats">

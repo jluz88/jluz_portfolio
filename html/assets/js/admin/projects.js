@@ -23,7 +23,7 @@ $(function(){
 
 		tagName:'tr',
 
-		template: _.template($('#tpl_projects_item').html()),
+		template: _.template( $('#tpl_projects_item').html() ),
 
 		events:{
 			'dblclick .view' : 'edit',
@@ -51,6 +51,7 @@ $(function(){
 		},
 
 		close: function(){
+			var self  = this;
 			var value = this.$el.find('.edit').val();
 			var currentTitle = this.model.get('title');
 
@@ -59,7 +60,14 @@ $(function(){
 			}else if(value == currentTitle){
 				this.$el.find(".view").show();
 				this.$el.find(".edit").hide();
-				this.$el.find(".delete").show();
+				this.$el.hover(
+					function(){
+						self.$el.find(".delete").show();
+					},
+					function(){
+						self.$el.find(".delete").hide();
+					}
+				);
 			}else{
 				this.model.save({'title': value});
 			}

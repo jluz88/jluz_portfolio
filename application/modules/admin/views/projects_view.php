@@ -6,8 +6,14 @@
 			display: none;
 		}
 		.delete{
+			display: none;
 			cursor: pointer;
 		}
+
+		tr:hover .delete{
+			display: block;
+		}
+
 	</style>
 	
 	

@@ -171,7 +171,7 @@ $(function(){
     // loading any preexisting todos that might be saved in *localStorage*.
     initialize: function() {
 
-      this.input = this.$("#new-todo");
+      this.input       = this.$("#new-todo");
       this.allCheckbox = this.$("#toggle-all")[0];
 
       this.listenTo(Todos, 'add', this.addOne);
@@ -179,7 +179,7 @@ $(function(){
       this.listenTo(Todos, 'all', this.render);
 
       this.footer = this.$('footer');
-      this.main = $('#main');
+      this.main   = $('#main');
 
       Todos.fetch();
     },
