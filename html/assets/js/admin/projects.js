@@ -27,6 +27,7 @@ $(function(){
 
 		events:{
 			'dblclick .view' : 'edit',
+			'click .open'    : 'openProject',
 			'click .delete'  : 'clear',
 			'blur .edit'     : 'close',
 			'keypress .edit' : 'updateOnEnter'
@@ -46,8 +47,19 @@ $(function(){
 
 		edit: function(){
 			this.$el.find(".view").hide();
+			this.$el.find(".open").hide();
 			this.$el.find(".delete").hide();
-			this.$el.find(".edit").show().focus().val(this.model.get('title'));
+			this.$el.find(".edit").show().focus().val( this.model.get('title') );
+		},
+
+		openProject: function(){
+			var projectId = this.model.get('id');
+			//var baseUrl   = location.host;
+			//var protocol  = location.protocol;
+
+			window.location = base_url + '/admin/items/' + projectId;
+			return false;
+
 		},
 
 		close: function(){
@@ -60,14 +72,17 @@ $(function(){
 			}else if(value == currentTitle){
 				this.$el.find(".view").show();
 				this.$el.find(".edit").hide();
-				this.$el.hover(
-					function(){
-						self.$el.find(".delete").show();
-					},
-					function(){
-						self.$el.find(".delete").hide();
-					}
-				);
+				this.$el.find(".open").show();
+				this.$el.find(".delete").show();
+
+				// this.$el.hover(
+				// 	function(){
+				// 		self.$el.find(".delete").show();
+				// 	},
+				// 	function(){
+				// 		self.$el.find(".delete").hide();
+				// 	}
+				// );
 			}else{
 				this.model.save({'title': value});
 			}

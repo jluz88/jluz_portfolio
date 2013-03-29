@@ -39,21 +39,23 @@
 */
 #Default Routes
 $route['default_controller'] = "main";
-$route['404_override'] = '';
+$route['404_override']       = '';
 
 #User routes
 // $route['home/(:any)']  = "home/$1";
 // $route['a/(:any)']     = "album/id/$1";
 // $route['admin/(:any)'] = "user/admin/$1";
 // $route['user/(:any)']  = "user/$1";
-$route['v1/(:any)']    = "v1/v1/$1";
-$route['admin/(:any)'] = "admin/admin/$1";	
-$route['(:any)']       = "main/cat/$1";
-$route['contact']      = "main/contact";
-$route['login']        = "user/login";
-$route['logout']       = "user/logout";
-$route['register']     = "user/register";
-$route['admin']        = "admin/main"; 
+$route['v1/(:any)']    		 = "v1/v1/$1";
+
+$route['admin/(:any)'] 		 = "admin/admin/$1";
+$route['admin/items/(:any)'] = "admin/items/$1";
+$route['(:any)']       	     = "main/cat/$1";
+$route['contact']      		 = "main/contact";
+$route['login']        		 = "user/login";
+$route['logout']       		 = "user/logout";
+$route['register']     		 = "user/register";
+$route['admin']        		 = "admin/main"; 
 
 
 

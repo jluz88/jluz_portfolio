@@ -1,0 +1,34 @@
+
+/* Categories Page */
+#cat_list .edit{
+    display: none;
+}
+
+#cat_list tr:hover .delete{
+    display: block;
+}
+
+#cat_list .delete{
+    display: none;
+    cursor: pointer;
+}
+
+/* Projects Page */
+
+#project_list .edit{
+	display: none;
+}
+
+#project_list tr:hover .delete, #project_list tr:hover .open{
+	display: block;
+}
+
+#project_list tr:hover{
+	background: #fff8c9;
+}
+
+#project_list .delete, #project_list .open{
+{
+	display: none;
+	cursor: pointer;
+}

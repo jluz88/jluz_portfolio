@@ -83,7 +83,7 @@ class v1 extends REST_Controller{
 	public function projects_post()
 	{
 		$data = $this->post();
-		
+							
 		$this->db->insert('projects', $data);
 		
 		$cat_id = $this->db->insert_id();
@@ -102,7 +102,7 @@ class v1 extends REST_Controller{
 	}
 
 	public function projects_delete($id)
-	{
+	{				
 		$this->db->delete('projects', array('id' => $id));
 		
 		if($this->db->affected_rows()){
@@ -113,5 +113,7 @@ class v1 extends REST_Controller{
 		
 		$this->response($return);
 	}
+
+
 	
 }

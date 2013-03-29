@@ -27,7 +27,7 @@
   
 	<!-- Included JS Files (Compressed) -->
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="<?=base_url()?>/assets/js/jquery_ui.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.8.4/jquery.lazyload.min.js"></script>
 		  
 	<!-- Initialize JS Plugins -->

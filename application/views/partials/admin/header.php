@@ -9,10 +9,17 @@
 
   <title>Admin</title>
 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.0.2/css/normalize.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.0.2/css/foundation.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/foundation/css/normalize.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/foundation/css/foundation.css">
 
-  <script src="//cdn.jsdelivr.net/foundation/4.0.2/js/vendor/custom.modernizr.js"></script>
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/admin/admin_global.css">
+
+  <script src="<?=base_url()?>assets/foundation/js/vendor/custom.modernizr.js"></script>
+  <script type="text/javascript">
+
+    var base_url = '<?=base_url()?>';
+    
+  </script>
 
 </head>
 <body>

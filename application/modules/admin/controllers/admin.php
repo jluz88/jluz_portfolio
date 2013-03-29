@@ -25,6 +25,11 @@ class admin extends CI_controller {
 	{
 		$this->template->build('projects_view');	
 	}
+
+	public function items($id)
+	{
+		$this->template->build('items_view');	
+	}
 	
 	public function upload()
 	{
