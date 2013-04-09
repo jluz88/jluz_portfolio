@@ -51,13 +51,13 @@
   <div class="row">
     <div class="large-3 columns">
     	<div class="docs section-container accordion" data-section data-options="deep_linking: false">
-		  <section class="section ">
+		  <section class="section">
 		    <p class="title"><a href="<?=base_url().'admin/cats'?>">Categories</a></p>
 		  </section>
-		  <section class="section ">
+		  <section class="section <?if($this->uri->segment(2) == 'projects'):?>active<?endif?>">
 		  	<p class="title"><a href="<?=base_url().'admin/projects'?>">Projects</a></p>
 		  </section>
-		  <section class="section ">
+		  <section class="section">
 		    <p class="title"><a href="#">Galleries</a></p>
 		    <div class="content">
 		      <ul class="side-nav">

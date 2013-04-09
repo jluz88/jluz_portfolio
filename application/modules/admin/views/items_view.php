@@ -1,5 +1,5 @@
 <div class="large-12 columns">
-	<h1>My Project</h1>
+	<h1 id="the_title"></h1>
 </div>
 <div class="large-8 columns">
 	<input type="text" id="project_name" name="project_name" placeholder="Add Project">

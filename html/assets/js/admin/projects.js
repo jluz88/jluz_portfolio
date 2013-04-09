@@ -57,7 +57,7 @@ $(function(){
 			//var baseUrl   = location.host;
 			//var protocol  = location.protocol;
 
-			window.location = base_url + '/admin/items/' + projectId;
+			window.location = base_url + 'admin/items/' + projectId;
 			return false;
 
 		},

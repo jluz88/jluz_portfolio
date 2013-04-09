@@ -59,14 +59,8 @@ class v1 extends REST_Controller{
 	public function cats_delete($id)
 	{
 		$this->db->delete('cats', array('id' => $id));
-		
-		if($this->db->affected_rows()){
-			$return = TRUE;
-		}else{
-			$return = FALSE;
-		}
-		
-		$this->response($return);
+
+		$this->response( $this->db->affected_rows() ? TRUE : FALSE );
 	}
 	
 	public function projects_get($id = null)

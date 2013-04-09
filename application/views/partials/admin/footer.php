@@ -19,7 +19,7 @@
  
   <div class="reveal-modal" id="mapModal">
     <h4>Where We Are</h4>
-    <p><img src="http://placehold.it/800x600" /></p>
+    <!-- <p><img src="http://placehold.it/800x600" /></p> -->
  
     <!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
     <a href="#" class="close-reveal-modal">&times;</a>

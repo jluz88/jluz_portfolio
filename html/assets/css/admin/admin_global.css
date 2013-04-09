@@ -1,5 +1,20 @@
+/*
+    Foundation Override
+*/
+/*@media only screen and (min-width: 58.75em){
 
-/* Categories Page */
+	.top-bar{
+		margin-bottom: 0;
+	}
+
+}*/
+.top-bar{
+    margin-bottom: 0;
+}
+
+/*
+	Categories Page
+*/
 #cat_list .edit{
     display: none;
 }
@@ -32,3 +47,7 @@
 	display: none;
 	cursor: pointer;
 }
+
+
+
+
